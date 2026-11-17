@@ -1,0 +1,13 @@
+Bridge connects Abstraction(interface = GUI [not Java interface]) and Implementation 
+
+We can develop variants (expand) in both directions, just need connection logic 
+
+The Abstraction (Shape) class contains a reference to the Implementation (Color) object as its field.
+We can have more variants of Abstraction (extending this class, like Circle, Square)
+
+The Implementation will have concrete implementations implementing it. Like Red, Blue, etc. 
+
+So, we can keep expanding code in both, and the functionality does NOT need more conditionals to be 
+handled.
+
+Client only communicates with the abstraction layer.

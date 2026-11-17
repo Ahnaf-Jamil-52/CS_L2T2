@@ -1,0 +1,23 @@
+A class may have different states (defined) it can be in.
+And the transitions between states are also (defined).
+This results in A LOT OF CONDITIONALS easily in base class method.
+
+Solution:
+Create new classes for all possible states of an object and 
+extract all state-specific behaviours into these classes. 
+
+Now, the original object, called CONTEXT, stores a reference to 
+one of the state objects (current state) through a STATE INTERFACE.
+
+STRUCTURE:
+1. CONTEXT stores reference to one of the concrete state objects 
+    via the State interface.
+2. State interface 
+3. Concrete States implement State interface. To avoid duplication,
+    provide intermediate abstract classes to encapsulate some common 
+    behaviour.
+    May store BACK-reference to context object, so can fetch req info
+    from context object, as well as INITIATE state transitions.
+4. {BOTH} context and concrete states can set the next state of the 
+    context and perform the actual state transition by replacing the
+    state object linked to the context.
